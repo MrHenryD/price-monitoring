@@ -1,0 +1,204 @@
+[
+    {
+        "model": "spy.Seller",
+        "pk": 1,
+        "fields": {
+            "name": "Bob's Electronics",
+            "active": true,
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Seller",
+        "pk": 2,
+        "fields": {
+            "name": "Big Discount Electronics",
+            "active": true,
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Seller",
+        "pk": 3,
+        "fields": {
+            "name": "Flea Market Electronics",
+            "active": true,
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Seller",
+        "pk": 4,
+        "fields": {
+            "name": "Windows 1998 Store",
+            "active": false,
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 1,
+        "fields": {
+            "seller": 1,
+            "universal_product_id": "72527273070",
+            "seller_product_id": "72527273070",
+            "name": "Apple Computer",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 3000.32,
+            "product_url": "example.com",
+            "image_url": "https://images.freeimages.com/images/large-previews/f86/workspace-1635875.jpg",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 2,
+        "fields": {
+            "seller": 2,
+            "universal_product_id": "72527273070",
+            "seller_product_id": "72527273070",            
+            "name": "Apple Macbook",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 2900.32,
+            "product_url": "example.com",
+            "image_url": "https://images.freeimages.com/images/large-previews/e49/isolated-macbook-pro-1615424.jpg",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 3,
+        "fields": {
+            "seller": 3,
+            "universal_product_id": "72527273070",
+            "seller_product_id": "72527273070",
+            "name": "Macbook Pro",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 2800.32,
+            "product_url": "example.com",
+            "image_url": "https://media.istockphoto.com/photos/computer-screen-showing-apple-event-logo-2020-on-the-screen-picture-id1283765199?k=20&m=1283765199&s=612x612&w=0&h=7Azx8uQe73kABxFWdD5R-pfvdZ_Hzsc2V1ySOrBUDoI=",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 4,
+        "fields": {
+            "seller": 1,
+            "universal_product_id": "72527273071",
+            "seller_product_id": "72527273071",
+            "name": "Mouse",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 100.32,
+            "product_url": "example.com",
+            "image_url": "https://images.freeimages.com/images/large-previews/d72/g5-mouse-1-1471676.jpg",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 5,
+        "fields": {
+            "seller": 2,
+            "universal_product_id": "72527273071",
+            "seller_product_id": "72527273071",
+            "name": "Apple Mouse",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 110.32,
+            "product_url": "example.com",
+            "image_url": "https://images.freeimages.com/images/large-previews/480/mouse-1243605.jpg",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 6,
+        "fields": {
+            "seller": 3,
+            "universal_product_id": "72527273071",
+            "seller_product_id": "72527273071",
+            "name": "Magic Mouse",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 30.32,
+            "product_url": "example.com",
+            "image_url": "https://images.freeimages.com/images/large-previews/5bb/mouse-1-1243457.jpg",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 7,
+        "fields": {
+            "seller": 1,
+            "universal_product_id": "72527273072",
+            "seller_product_id": "130300",
+            "name": "Charger",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 90.32,
+            "product_url": "example.com",
+            "image_url": "",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 8,
+        "fields": {
+            "seller": 2,
+            "universal_product_id": "72527273072",
+            "seller_product_id": "APPLCHRGR",
+            "name": "Apple Charger",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 100.32,
+            "product_url": "example.com",
+            "image_url": "",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    },
+    {
+        "model": "spy.Product",
+        "pk": 9,
+        "fields": {
+            "seller": 3,
+            "universal_product_id": "72527273072",
+            "seller_product_id": "72527273072",
+            "name": "Macbook Pro Charger",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "active": true,
+            "update_frequency": 7,
+            "price": 20.99,
+            "product_url": "example.com",
+            "image_url": "https://images.freeimages.com/images/small-previews/776/fruit-technology-1-1242967.jpg",
+            "created_at": "2021-10-31T12:00:00+00:00",
+            "updated_at": "2021-10-31T12:00:00+00:00"
+        }
+    }  
+]

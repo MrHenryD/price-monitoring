@@ -1,0 +1,42 @@
+version: "3.8"
+
+x-shared-environment: 
+  &shared-environment
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_DB: appdb
+  POSTGRES_HOST: db
+  POSTGRES_PORT: 5432
+
+services:  
+  db:
+    image: postgres:14-bullseye
+    environment:
+      <<: *shared-environment
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      retries: 5
+    restart: always
+  app:
+    build: .
+    environment:
+      <<: *shared-environment 
+      DJANGO_SUPERUSER_USERNAME: admin
+      DJANGO_SUPERUSER_PASSWORD: admin
+      DJANGO_SUPERUSER_EMAIL: admin@example.com
+    ports:
+      - 8000:8000
+    depends_on:
+      db:
+         condition: service_healthy
+    volumes:
+      - ./app:/app/app
+    command: >
+      sh -c "python app/manage.py makemigrations &&
+             python app/manage.py makemigrations spy &&             
+             python app/manage.py migrate &&
+             python app/manage.py createsuperuser --noinput &&
+             python app/manage.py loaddata init.json &&
+             python app/manage.py runserver 0.0.0.0:8000"
+    restart: always

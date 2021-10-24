@@ -3,9 +3,10 @@
 # About this Project
 Tool used for monitoring prices.
 
+![Search Demo](docs/search.png)
+
 ## Built with
 * Django
-* Scrapy
 * Bootstrap
 
 # Contributing

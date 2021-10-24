@@ -4,3 +4,9 @@ venv/
 
 # MAC
 .DS_Store
+
+# Cache
+__pycache__
+
+# Django
+migrations/
