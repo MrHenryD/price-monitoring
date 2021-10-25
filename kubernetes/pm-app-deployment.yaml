@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pm-app-deployment
+  labels:
+    app: pm-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pm-app
+  template:
+    metadata:
+      labels:
+        app: pm-app
+    spec:
+      containers:
+      - name: pm-app
+        image: price-monitoring:1.0
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DJANGO_SUPERUSER_USERNAME
+          value: "admin"
+        - name: DJANGO_SUPERUSER_PASSWORD
+          value: "admin"
+        - name: DJANGO_SUPERUSER_EMAIL
+          value: "admin@example.com"
+        - name: DJANGO_SECRET_KEY
+          value: "secret"
+        - name: POSTGRES_USER
+          value: "postgres"
+        - name: POSTGRES_PASSWORD
+          value: "postgres"
+        - name: POSTGRES_DB
+          value: "appdb"
+        - name: POSTGRES_HOST
+          value: "db"
+        - name: POSTGRES_PORT
+          value: "5432"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pm-app-service
+spec:
+  selector:
+    app: pm-app
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
