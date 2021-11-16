@@ -1,4 +1,4 @@
-# price-monitoring
+# voracity
 
 # About this Project
 Tool used for monitoring prices.

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE=henry/price-monitoring
+BASE=henry/voracity
 VERSION=$1
 
 if [ $# -eq 0 ]; then
